@@ -1,15 +1,19 @@
 <script setup>
-defineProps({
+import {ref} from "vue"
+const props = defineProps({
   msg: {
     type: String,
     required: true
   }
 })
+const text = ref(props.msg)
+const changeText = () => {text.value = 'Dupa'}
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="green">{{ text }}</h1>
+    <button @click="changeText">zmien</button>
     <h3>
       You’ve successfully created a project with
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +

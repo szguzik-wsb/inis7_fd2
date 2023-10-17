@@ -6,9 +6,11 @@ const props = defineProps({
     required: true
   }
 })
-const text = ref(props.msg) //Start
+const text = ref(props.msg) //Start zdanie zrobione
 const changeText = () =>  text.value = 'Dupa'
 </script>
+
+
 
 <template>
   <div class="greetings">
